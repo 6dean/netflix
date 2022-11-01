@@ -1,21 +1,8 @@
 import "./App.css";
 import movies from "./movies.json";
+import Channel from "./components/Channel";
 
 function App() {
-  const tab1 = movies.map((elem) => {
-    return elem.category;
-  });
-  const tab2 = movies.map((elem) => {
-    return elem.images;
-  });
-  const tab3 = tab2.map((elem) => {
-    return elem[0];
-  });
-
-  console.log(movies);
-  console.log(tab2);
-  console.log(tab3);
-
   return (
     <div className="container">
       <header>
@@ -24,11 +11,11 @@ function App() {
           alt=""
         />
       </header>
-      <div className="channel">
-        <div className="Reprendreacec">
-          <p>{tab1[0]}</p>
-          <img src={tab2[0][1]} alt="" />
-        </div>
+
+      <div className="liste-programmes">
+        {movies.map((movie, index) => {
+          return <Channel key={index} ressource={movie} />;
+        })}
       </div>
     </div>
   );

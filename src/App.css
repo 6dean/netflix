@@ -2,15 +2,44 @@
   background-color: black;
 }
 
+.container {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
 header img {
-  width: 120px;
+  width: 100px;
   margin-left: 30px;
 }
 
-.reprendreavec img {
-  height: 140px;
+.liste-programmes img {
+  height: 120px;
 }
 
-p {
+h2 {
   color: white;
+  font-size: 20px;
+  margin-left: 5px;
+  font-family: Tahoma, sans-serif;
+  font-weight: lighter;
+  letter-spacing: 1px;
+}
+
+.capsule {
+  display: flex;
+  flex-direction: column;
+}
+
+div .caroussel {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  list-style: none;
+  overflow-x: scroll;
+}
+.caroussel::-webkit-scrollbar {
+  width: 0;
+  height: 0;
 }
